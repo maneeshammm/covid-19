@@ -35,7 +35,6 @@ def hello():
             confirmed=country_data['data']['latest_data'].get('confirmed')
             deaths=country_data['data']['latest_data'].get('deaths')
             flash(f'Country: {name}\n Date: {date}\n Recovered: {str(recovered)}\nConfirmed: {str(confirmed)} \nDeaths: {str(deaths)}')
-            #flash(f'Country: {name}\n Recovered: {str(recovered)}\nConfirmed: {str(confirmed)} \nDeaths: {str(deaths)}')
             session.execute(f"INSERT INTO covid.stats(ID,Name,Date,recovered,confirmed,deaths) VALUES('{country}','{name}','{date}',{recovered},{confirmed},{deaths});")
         else:
             print(resp.reason)   
