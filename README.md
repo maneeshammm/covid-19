@@ -138,10 +138,10 @@ into the certificate request.This is called a Distinguished Name or a DN.
 There are quite a few fields which can be leftblank
 For some fields there will be a default value, enter '.', the field will be left blank.
 -----
-Country Name (2 letter code) [AU]:US
-State or Province Name (full name) [Some-State]:Oregon
-Locality Name (eg, city) []:Portland
-Organization Name (eg, company) [Internet Widgits Pty Ltd]:Miguel Grinberg Blog
+Country Name (2 letter code) [AU]:UK
+State or Province Name (full name) [Some-State]:London
+Locality Name (eg, city) []:West Drayton
+Organization Name (eg, company) [Internet Widgits Pty Ltd]:Cloud Computing Mini Project
 Organizational Unit Name (eg, section) []:
 Common Name (e.g. server FQDN or YOUR name) []:localhost
 Email Address []:
@@ -194,8 +194,8 @@ Notes:
  ```
  To delete 
  ```
- sudo microk8s.kubectl delete deployment covid2019app-deployment
- sudo microk8s.kubectl delete services covid2019app-deployment
+ sudo microk8s.kubectl delete deployment covidmyapp-deployment
+ sudo microk8s.kubectl delete services covidmyapp-deployment
  ```
 
 To learn more about creating external load balancer.[link](https://kubernetes.io/docs/tasks/access-application-cluster/create-external-load-balancer/)
