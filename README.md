@@ -26,6 +26,14 @@ Application demo
 
 Apache Cassandra is a database management system that replicates large amounts of data across many servers, avoiding a single point of failure and reducing latency.[Learn More.](https://cassandra.apache.org/)
 
+To build image
+```
+sudo docker build . --tag=cassandrarest:v1
+```
+To run it as a service, exposing the deploment to get an external IP:
+```
+sudo docker run -p 80:80 cassandrarest:v1
+```
 ## Creating RESTful Services
 
 Please note: this REST API uses a self signed certificate for SSL encryption. The curl command doesn't like self signed certificates and will not allow any requests to be made. Therefore, in order be able to make a request run all the below commands using sudo and the command parameter -k.
