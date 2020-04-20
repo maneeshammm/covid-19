@@ -139,6 +139,11 @@ To use this new self-signed certificate in Flask application,ssl_context argumen
 
 To create an External Load Balancer,following steps are required:
 
+Install Kubernetes
+```
+sudo snap install microk8s --classic
+```
+
   1.cassandra-image need to be build and push to registry
   ```
   sudo microk8s enable registry #To install registry
@@ -164,5 +169,17 @@ To create an External Load Balancer,following steps are required:
 
   sudo microk8s kubectl expose deployment covidmyapp-deployment --type=LoadBalancer --port=443 --target-port=443
 ```
+Notes:
+
+ To see the pods and serices created
+ ```
+ sudo microk8s.kubectl get all
+
+ ```
+ To delete 
+ ```
+ sudo microk8s.kubectl delete deployment covid2019app-deployment
+ sudo microk8s.kubectl delete services covid2019app-deployment
+ ```
 
 To learn more about creating external load balancer.[link](https://kubernetes.io/docs/tasks/access-application-cluster/create-external-load-balancer/)
