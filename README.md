@@ -120,6 +120,8 @@ Date: Sun, 19 Apr 2020 00:33:32 GMT
 
 Flask looks for template files inside the templates folder.Therefore,index.html file is created inside templates.Inorder to view the HTML file created,import render_template() from the flask framework which is used to render the template files.
 
+![img](/homepage.PNG)
+
 ## Running Flask Application Over HTTPS
 
 Self signed certificates are generated in the command line.
