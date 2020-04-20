@@ -18,7 +18,9 @@ Run the project using python3 app.py.
 
 ## Overview
 
-![Application demo](https://github.com/maneeshammm/covid-19.git/results.PNG)
+Application demo
+
+![img](/results.PNG)
 
 ## Cassandra 
 
