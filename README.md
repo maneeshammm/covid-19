@@ -4,7 +4,7 @@ This README file contains the description of work involved in doing the MiniProj
 
 The project supports an application that is developed in flask and python and is deployed on a docker. The data extracted from the application API is stored in a cassandra database.
 
-The project implements an API ([API documentation](https://about-corona.net/documentation)) that gets the up-to-date statstics for given country code. The response from the source is in the form of JSON but displayed in human readble HTML format. The information of interest are number of virus cases confirmed,recovered,deaths and date the data got updated.country code entered as'id' is used as a unique PRIMAY KEY for the cassandra database. The project assumes that a table already exists in the database ( The table covid.stats is created in KEYSPACE covid-19 using CQL)
+The project implements an API ([API documentation](https://about-corona.net/documentation)) that gets the up-to-date statstics for given country code. The response from the source is in the form of JSON but displayed in human readble HTML format. The information of interest are number of virus cases confirmed,recovered,deaths and date the data got updated.country code entered as'id' is used as a unique PRIMAY KEY for the cassandra database. The project assumes that a table already exists in the database ( The table covid.stats is created in KEYSPACE covid using CQL)
 
 The main application file is app.py. It begins by importing required libraries.Cluster is imported from cassandra.cluster. This is needed to communicate with a cassandra database. The project also imports flask, request, render_template and forms. 
 
@@ -17,6 +17,10 @@ How To Install and Run the Project : Install the Dependencies using pip install 
 Run the project using python3 app.py.
 
 ## Overview
+
+![Application demo](https://github.com/maneeshammm/covid-19.git/results.PNG)
+
+## Cassandra 
 
 Apache Cassandra is a database management system that replicates large amounts of data across many servers, avoiding a single point of failure and reducing latency.[Learn More.](https://cassandra.apache.org/)
 
@@ -171,7 +175,7 @@ sudo snap install microk8s --classic
 ```
 Notes:
 
- To see the pods and serices created
+ To see the pods and services created
  ```
  sudo microk8s.kubectl get all
 
